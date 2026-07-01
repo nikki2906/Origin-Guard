@@ -31,7 +31,7 @@ def get_attribution(score: float) -> str:
         return "likely_human"
 
 def combine_signals(llm_score: float, stylo_score: float) -> float:
-    return round((llm_score * 0.6) + (stylo_score * 0.4), 3)
+    return round((llm_score * 0.55) + (stylo_score * 0.45), 3)
 
 def get_label(attribution: str) -> str:
     if attribution == "likely_ai":
